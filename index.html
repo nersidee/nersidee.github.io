@@ -8,21 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
-        /* Impostiamo il font di base */
+        /* Impostazioni generali */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            scroll-behavior: smooth; /* Effetto scorrimento fluido tra le sezioni */
+            scroll-behavior: smooth; 
         }
         
         /* Stile della Navbar */
         .navbar {
-            padding: 20px 0;
+            padding: 15px 0;
             transition: all 0.3s ease-in-out;
         }
         .navbar-brand {
             font-weight: 800;
             font-size: 1.5rem;
-            color: #0d6efd !important; /* Colore principale (blu) */
+            color: #0d6efd !important; 
         }
         .nav-link {
             font-weight: 500;
@@ -31,9 +31,9 @@
             letter-spacing: 1px;
         }
 
-        /* Stile della sezione Home (Hero) */
+        /* Stile della sezione Home */
         .hero-section { 
-            height: 100vh; /* Occupa tutta l'altezza dello schermo */
+            height: 100vh; 
             display: flex;
             align-items: center;
             background-color: #f8f9fa; 
@@ -43,10 +43,22 @@
             font-weight: 800;
             color: #212529;
         }
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: #6c757d;
-            margin-bottom: 30px;
+
+        /* Effetto di transizione per le schede dei progetti */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+        }
+        
+        /* Stile per i badge delle competenze */
+        .skill-badge {
+            font-size: 0.95rem;
+            padding: 10px 15px;
+            margin: 5px;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -73,10 +85,10 @@
     <section id="home" class="hero-section text-center text-lg-start">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
+                <div class="col-lg-8 mx-auto text-center mt-5">
                     <p class="text-primary fw-bold mb-2">Ciao, io sono</p>
                     <h1 class="hero-title mb-3">Riccardo Accatino</h1>
-                    <p class="hero-subtitle">Studente UPO e Sviluppatore Software Appassionato</p>
+                    <p class="fs-4 text-secondary mb-4">Studente UPO e Sviluppatore Software Appassionato</p>
                     <div class="mt-4">
                         <a href="#progetti" class="btn btn-primary btn-lg px-4 py-2 me-2 shadow-sm">I miei progetti</a>
                         <a href="https://github.com/nersidee" target="_blank" class="btn btn-outline-dark btn-lg px-4 py-2 shadow-sm">
@@ -87,7 +99,8 @@
             </div>
         </div>
     </section>
-<section id="profilo" class="py-5 bg-white">
+
+    <section id="profilo" class="py-5 bg-white">
         <div class="container py-5">
             <div class="row text-center mb-5">
                 <div class="col">
@@ -103,7 +116,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <h3 class="fw-bold mb-3">Studente UPO & Sviluppatore Software</h3>
+                    <h3 class="fw-bold mb-3">Sviluppatore Software in Formazione</h3>
                     <p class="fs-5 text-muted lh-lg">
                         Sono uno studente presso l'UPO (Università del Piemonte Orientale) con una grande passione per l'informatica e lo sviluppo software. Sono una persona molto motivata, curiosa, pronta ad apprendere e fortemente incline al teamworking. Attualmente cerco un'opportunità lavorativa che mi permetta di poter mettere a frutto le competenze acquisite durante i miei studi e continuare a crescere professionalmente.
                     </p>
@@ -118,33 +131,28 @@
                 
                 <div class="col-md-6 mb-5 mb-md-0">
                     <h3 class="fw-bold mb-4 text-primary"><i class="bi bi-briefcase-fill me-2"></i>Esperienza</h3>
-                    
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Formatore nelle Scuole</h5>
                             <h6 class="card-subtitle mb-3 text-primary">2023 - 2026</h6>
                             <ul class="text-secondary mb-0 lh-lg">
-                                <li><strong>Stem Days:</strong> Ho guidato e affiancato ragazze nella costruzione di un braccio robotico nell'arco di 4 giorni.</li>
-                                <li><strong>RollCloud:</strong> Ho tenuto corsi di formazione nelle scuole sul tema dell'Intelligenza Artificiale.</li>
-                                <li><strong>Coding Girl:</strong> Ho supportato studenti delle scuole superiori con l'obiettivo di fargli creare un chatbot basato su IA.</li>
+                                <li><strong>Stem Days:</strong> Guida nella costruzione di un braccio robotico.</li>
+                                <li><strong>RollCloud:</strong> Corsi sul tema dell'Intelligenza Artificiale.</li>
+                                <li><strong>Coding Girl:</strong> Supporto agli studenti per creare un chatbot IA.</li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Arbitro per Gare di Robotica</h5>
+                            <h5 class="card-title fw-bold">Arbitro Gare di Robotica</h5>
                             <h6 class="card-subtitle mb-3 text-primary">2024 - 2025</h6>
-                            <p class="card-text text-secondary mb-0">
-                                Ho partecipato in qualità di arbitro ufficiale per la <strong>Rome Cup</strong> nelle edizioni del 2024 e del 2025.
-                            </p>
+                            <p class="card-text text-secondary mb-0">Arbitro ufficiale per la <strong>Rome Cup</strong> (2024-2025).</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <h3 class="fw-bold mb-4 text-primary"><i class="bi bi-mortarboard-fill me-2"></i>Istruzione</h3>
-                    
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Università del Piemonte Orientale (UPO)</h5>
@@ -152,13 +160,12 @@
                             <p class="card-text text-secondary mb-0">Studente Universitario.</p>
                         </div>
                     </div>
-
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">ITIS di Santhià</h5>
                             <h6 class="card-subtitle mb-3 text-primary">2023</h6>
                             <p class="card-text text-secondary mb-2">Diploma di Perito Informatico.</p>
-                            <span class="badge bg-success fs-6">Votazione: 100/100</span>
+                            <span class="badge bg-success fs-6">Voto: 100/100</span>
                         </div>
                     </div>
                 </div>
@@ -166,6 +173,115 @@
             </div>
         </div>
     </section>
+
+    <section id="competenze" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="fw-bold text-primary text-uppercase">Competenze</h2>
+                    <div class="mx-auto bg-primary mb-4" style="height: 3px; width: 50px;"></div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-10 mx-auto">
+                    <h4 class="mb-4 text-secondary">Linguaggi di Programmazione</h4>
+                    <div class="mb-5">
+                        <span class="badge bg-dark skill-badge">HTML5 & CSS3</span>
+                        <span class="badge bg-dark skill-badge">JavaScript</span>
+                        <span class="badge bg-dark skill-badge">C / C++ / C#</span>
+                        <span class="badge bg-dark skill-badge">Java</span>
+                        <span class="badge bg-dark skill-badge">Python</span>
+                        <span class="badge bg-dark skill-badge">PHP</span>
+                        <span class="badge bg-dark skill-badge">SQL</span>
+                    </div>
+
+                    <h4 class="mb-4 text-secondary">Framework, Strumenti e Hardware</h4>
+                    <div class="mb-4">
+                        <span class="badge bg-primary skill-badge">Bootstrap</span>
+                        <span class="badge bg-primary skill-badge">NodeJS & Express.js</span>
+                        <span class="badge bg-primary skill-badge">JavaFX & Swing</span>
+                        <span class="badge bg-primary skill-badge">Maven & JUnit</span>
+                        <span class="badge bg-primary skill-badge">SQLite</span>
+                        <span class="badge bg-primary skill-badge">Arduino</span>
+                        <span class="badge bg-primary skill-badge">Raspberry Pi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="progetti" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="fw-bold text-primary text-uppercase">I Miei Progetti</h2>
+                    <div class="mx-auto bg-primary mb-5" style="height: 3px; width: 50px;"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm project-card p-2">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-dark">TMS - Triage Management System</h4>
+                            <p class="text-muted mt-3">Sistema gestionale in <strong>JavaFX MVC</strong> per ottimizzare il flusso di lavoro del pronto soccorso, dal Triage alla refertazione, con database SQLite.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm project-card p-2">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-dark">Nexu</h4>
+                            <p class="text-muted mt-3">Web application simile a un social network creata con <strong>Node.js, Express e SQLite</strong>. Include registrazione, autenticazione e voto dei post.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm project-card p-2">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-dark">Lista di Articoli</h4>
+                            <p class="text-muted mt-3">Applicazione <strong>Java MVC</strong> con interfaccia grafica e testuale per gestire liste della spesa e inventari con salvataggio persistente dei dati.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm project-card p-2">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-dark">Esercizi Paradigmi Java</h4>
+                            <p class="text-muted mt-3">Raccolta didattica di micro-app in Java (<strong>OOP e JUnit</strong>), comprendente algoritmi, una rubrica e un'implementazione del gioco MasterMind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contatti" class="bg-dark text-white py-5">
+        <div class="container text-center py-4">
+            <h3 class="fw-bold mb-4">Mettiamoci in contatto!</h3>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-geo-alt-fill fs-2 text-primary mb-2 d-block"></i>
+                    <span>Livorno Ferraris</span>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-telephone-fill fs-2 text-primary mb-2 d-block"></i>
+                    <span>344 234 6219</span>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-envelope-fill fs-2 text-primary mb-2 d-block"></i>
+                    <a href="mailto:accatinoriccardo@gmail.com" class="text-white text-decoration-none">accatinoriccardo@gmail.com</a>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="https://github.com/nersidee" target="_blank" class="text-white fs-3 me-3"><i class="bi bi-github"></i></a>
+            </div>
+            <hr class="border-secondary mt-4 mb-4">
+            <p class="text-muted small mb-0">&copy; 2026 Riccardo Accatino. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
